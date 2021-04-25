@@ -2,7 +2,7 @@
 
 This is an implementation of [Multipath QUIC](https://github.com/qdeconinck/mp-quic/) transport layer protocol for live video (webcam) streaming. We attempted to perform webcam streaming in a loopback interface. 
 
-The frame_save folder contains the frames as received by the receiver. Right now, it contains the frames that were obtained during tests. The sender.go is the sender code that captures the frames from the webcam using Gocv. The receiver.go contains the code to receive frames from the mpquic server.
+The frame_save folder contains the frames as received by the receiver. Right now, it contains the frames that were obtained during tests. The sender.go is the sender code that captures the frames from the webcam using Gocv. The receiver.go contains the code to receive frames from the sender. The receiver is the server and the sender is the client.
 
 ## Installation
 
