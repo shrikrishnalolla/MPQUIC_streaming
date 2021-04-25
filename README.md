@@ -16,10 +16,10 @@ The code requires [Gocv](https://gocv.io/) package of Go which is used to captur
 
 Clear the frame_save folder, this folder must be empty before running the code. 
 
-Start the server(reciever.go) code.
+Start the server(receiver.go) code.
 
 ~~~
-go run reciever.go <insert_path_to_frame_save_directory>
+go run receiver.go <insert_path_to_frame_save_directory>
 ~~~
 
 Start the client(sender.go) code.
