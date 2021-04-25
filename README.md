@@ -2,6 +2,8 @@
 
 This is an implementation of [Multipath QUIC](https://github.com/qdeconinck/mp-quic/) transport layer protocol for live video (webcam) streaming. We attempted to perform webcam streaming in a loopback interface. 
 
+The frame_save folder contains the frames as received by the receiver. Right now, it contains the frames that were obtained during tests. The sender.go is the sender code that captures the frames from the webcam using Gocv. The receiver.go contains the code to receive frames from the mpquic server.
+
 ## Installation
 
 First,setup MPQUIC as described in the following [link](https://multipath-quic.org/2017/12/09/artifacts-available.html). Note that the given method is for mininet VM and necessary adjustments need to be made to run it on real systems. This experiment was done on a real system. This also installs go 1.9.2.
@@ -16,13 +18,13 @@ The code requires [Gocv](https://gocv.io/) package of Go which is used to captur
 
 Clear the frame_save folder, this folder must be empty before running the code. 
 
-Start the server(receiver.go) code.
+Start the server (receiver.go) code.
 
 ~~~
 go run receiver.go <insert_path_to_frame_save_directory>
 ~~~
 
-Start the client(sender.go) code.
+Start the client (sender.go) code.
 
 ~~~
 go run sender.go <camera_id> <server_ip>
